@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title> VCV Feedback</title>
+  <head>
+    <link href="../static/css/imain.css" rel="stylesheet">
+  </head>
+    <body>
+      <div class="container">
+        <h1>VCV Feedback</h1>
+        <h3>Please fill the entries to enter VCV Feedback portal</h3>
+        <div class="email"> {{text | safe}} </div>
+        <form action="{{url_for('home')}}" method="POST">
+          <input title="Your email will be safe with us" placeholder="Enter your email address" type="email" name="email_name" required> <br>
+          <input title="Your data will be safe with us" placeholder="password" type="password" name="pass_w" required> <br>
+          <button type="submit"> Submit </button>
+          <p><pre>                                                             <a href="{{ url_for('reset') }}" style="color:red">Forget your password ?</a></pre></p>
+        </form>
+      </div>
+    </body>
+</html>

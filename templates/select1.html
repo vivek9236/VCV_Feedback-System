@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html >
+
+<head>
+  <meta charset="UTF-8">
+ 
+<title>VCV Feedback</title>
+  
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<link rel="stylesheet" href="../static/css/style.css">
+
+  
+
+</head>
+
+
+<body>
+  
+<div class="center-on-page">
+  
+  
+<h1>Select a Category</h1>
+  
+<div class="select">
+
+<select name="slct" id="foo">
+      
+<option>Please select an option</option>
+      
+<option value="{{ url_for('select') }}">Department</option>
+      
+<option value="{{ url_for('select1') }}">Canteen</option>
+      
+<option value="{{ url_for('lib') }}">Library</option>
+</select>
+
+</div>
+  
+
+</div>
+<script>
+    document.getElementById("foo").onchange = function() {
+        if (this.selectedIndex!==0) {
+            window.location.href = this.value;
+        }        
+    };
+</script>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="home">
+</div>
+<div class="container" style="margin: 0 auto;width: 100%;height: 100%;background-color: #006666;color: #e6ffff;overflow:hidden;text-align: center;">
+        <h1 style="font-family: Arial,sans-serif;font-size: 30px;color: #e6ffff;margin-top: 80px;">Feedback Form</h1>
+        <h3>Please fill the entries to give your valuable feedback for respective department</h3>
+        <div class="email"> {{text | safe}} </div>
+        <form action="{{url_for('feedback')}}" method="POST" style="margin: 20px;">
+          <input title="Your data will be safe with us" placeholder="Service you want to comment on" type="text" name="service_name" required style="width: 350px;height: 15px;font-size: 15px;margin: 2px;padding: 20px;transition: all 0.2s ease-in-out;"> <br>
+          <input title="Your data will be safe with us" placeholder="Rating out of 5" type="number" min="0" max="5" name="rating" required style="width: 350px;height: 15px;font-size: 15px;margin: 2px;padding: 20px;transition: all 0.2s ease-in-out;"><br>
+          <input title="Your data will be safe with us" placeholder="Your comments" type="text" name="comments" required style="width: 350px;height: 15px;font-size: 15px;margin: 2px;padding: 20px;transition: all 0.2s ease-in-out;"> <br>
+          <input title="Your data will be safe with us" placeholder="Improvements like to have" type="text" name="improvements" required style="width: 350px;height: 15px;font-size: 15px;margin: 2px;padding: 20px;transition: all 0.2s ease-in-out;"> <br>
+          <input title="Your data will be safe with us" placeholder="Suggested actions" type="text" name="suggestions" required style="width: 350px;height: 15px;font-size: 15px;margin: 2px;padding: 20px;transition: all 0.2s ease-in-out;"> <br>
+          <button type="submit" style="width:70px;height: 30px;background-color: steelblue;margin: 3px;"> Submit </button>
+        </form>
+      </div>
+{% endblock %}

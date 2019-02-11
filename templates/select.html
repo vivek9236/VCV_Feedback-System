@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html >
+
+<head>
+  <meta charset="UTF-8">
+ 
+<title>VCV Feedback</title>
+  
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<link rel="stylesheet" href="../static/css/style.css">
+
+  
+
+</head>
+
+
+<body>
+  
+<div class="center-on-page">
+  
+  
+<h1>Department</h1>
+  
+<div class="select">
+
+<select name="slct" id="foo">
+      
+<option>Choose a department</option>
+      
+<option value="{{url_for('about')}}">Computer Science and Engineering</option>
+      
+<option value="{{url_for('about')}}">Information Technology</option>
+      
+<option value="{{url_for('about')}}">Mechanical Engineering</option> 
+<option value="{{url_for('about')}}">Electrical Engineering</option>
+ 
+<option value="{{url_for('about')}}">Electronics and Communication Engineering</option>
+
+ 
+<option value="{{url_for('about')}}">Civil Engineering</option>
+
+</select>
+
+</div>
+  
+
+</div>
+<script>
+    document.getElementById("foo").onchange = function() {
+        if (this.selectedIndex!==0) {
+            window.location.href = this.value;
+        }        
+    };
+</script>
+</body>
+
+</html>

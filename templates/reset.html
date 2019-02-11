@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title> VCV Feedback</title>
+  <head>
+    <link href="../static/css/jmain.css" rel="stylesheet">
+  </head>
+    <body>
+      <div class="container">
+        <h1>Reset your Password</h1>
+        <h3>Please fill the entries to Reset your password</h3>
+        <div class="email"> {{text | safe}} </div>
+        <form action="{{url_for('forget')}}" method="POST">
+          <input title="Your email will be safe with us" placeholder="Enter your email address" type="email" name="email_name" required> <br>
+          <button type="submit" class="cont"> Reset your password </button>
+        </form>
+      </div>
+    </body>
+</html>
